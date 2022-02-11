@@ -20,7 +20,8 @@
   <body>
     <div class="container">
       <div class="col mx-auto col-md-8 mt-3 text-center">
-        <div class="alert align-items-center id="message"">
+        <div class="alert align-items-center" id="message"></div> 
+
           <form id="form">
             <h3>TODO List</h3>
             <div class="input-group mb-3">
@@ -44,16 +45,9 @@
            
           <!--TODO List-->
             <ul class="list-group list-group-flush p-font" id="allTasks">
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Task</span>
-                <span>
-                    <a href="#"><i class="bi bi-check2-circle text-success"></i></a>
-                    <a href="#"><i class="bi bi-pencil-square text-primary"></i></a>
-                    <a href="#"><i class="bi bi-x-circle text-danger"></i></a>
-                </span>
-            </li
             </ul>
-          </div> <!--alert align-items-center-->
+            <input type="hidden" id="objIndex" value="">
+            <input type="hidden" id="tabValue" value="all">
       </div><!--col mx-auto col-md-8 mt-3 text-center-->
     </div> <!--container-->
     <script src="main.js"></script>

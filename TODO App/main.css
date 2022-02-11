@@ -1,3 +1,12 @@
 .p-font {
     font-size: 1.5rem;
 }
+
+.transition{
+    transition: all .5s ease-in-out;
+
+}
+.show {
+    display: block;
+    transition: all .5s ease-in-out;
+}
