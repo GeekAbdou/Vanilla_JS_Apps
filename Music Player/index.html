@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="main.css" rel="stylesheet" />
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="music-player">
+
+        <div class="music-player__top-bar">
+            <i class="material-icons">expand_more</i>
+            <span>Now Playing</span>
+            <i class="material-icons">more_horiz</i>
+        </div>
+        <!--End music-player__top-bar-->
+
+
+        <div class="music-player__music-picture">
+            <img src="" alt="">
+        </div>
+        <!--End music-player__music-picture-->
+
+
+        <div class="music-player__music-details">
+            <p class="music-details__name"></p>
+            <p class="music-details__artist"></p>
+        </div>
+        <!--End music-player__music-details-->
+
+
+        <div class="music-player__progress-bar">
+            <audio src="" id="current-audio"></audio>
+        </div>
+        <!--End music-player__progress-bar-->
+
+
+        <div class="music-player__timers">
+            <span class="current-time"></span>
+            <span class="total-time"></span>
+        </div>
+        <!--End music-player__timers-->
+
+
+        <div class="music-player__control">
+            <i id="repeat-plist" class="material-icons">repeat</i>
+            <i id="prev" class="material-icons">skip_previous</i>
+            <i id="play-pause" class="material-icons">play_arrow</i>
+            <i id="next" class="material-icons">skip_next</i>
+            <i id="plist" class="material-icons">queue_music</i>
+        </div>
+        <!--End music-player__timers-->
+
+
+
+
+
+    </div>
+    <!--music-player-->
+    <script src="./src/main.js"></script>
+</body>
+
+</html>
