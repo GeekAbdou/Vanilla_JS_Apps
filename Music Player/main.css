@@ -107,9 +107,14 @@ i {
   cursor: pointer;
 }
 
+.music-player__progress-area:hover .progress-bar::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .music-player__progress-bar {
   height: inherit;
-  width: 50%;
+  width: 0%;
   position: relative;
   border-radius: inherit;
   background: -webkit-gradient(linear, left top, right top, from(#ff74a4), to(#9f6ea3));

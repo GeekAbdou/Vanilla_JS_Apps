@@ -81,11 +81,16 @@ i {
     border-radius: 50px;
     background: #f0f0f0;
     cursor: pointer;
+
+    &:hover .progress-bar::before {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 
   &__progress-bar {
     height: inherit;
-    width: 50%;
+    width: 0%;
     position: relative;
     border-radius: inherit;
     background: linear-gradient(90deg, $pink 0%, $violet 100%);
