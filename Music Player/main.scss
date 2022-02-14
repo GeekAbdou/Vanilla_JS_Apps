@@ -1,6 +1,6 @@
 $pink: #ff74a4;
 $violet: #9f6ea3;
-$p-color: rgb(63, 63, 63);
+$p-color: rgb(87, 87, 87);
 $b-sh-color: rgba(0, 0, 0, 0.15);
 * {
   margin: 0;
@@ -146,19 +146,57 @@ i {
     } //End play button
   } //End Controls
   //End
+
   &__music-list {
     position: absolute;
     background: white;
     width: 100%;
     left: 0;
-    padding: 15px 30px;
     border-radius: 15px;
     box-shadow: 0px -5px 10px $b-sh-color;
     bottom: -55%;
     opacity: 0;
     pointer-events: none;
     z-index: 5;
-    transition: all 0.15s ease-out;
+    transition: all 0.3s ease-out;
+    &--header {
+      padding: 15px 30px;
+      .row {
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+        color: $p-color;
+      }
+    }
+
+    &--body {
+      //max-height: 300px;
+
+      & .plist-song {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        cursor: pointer;
+        padding: 5px 20px;
+        margin-bottom: 5px;
+        color: $p-color;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      & .playing {
+        pointer-events: none;
+        color: $violet;
+      }
+    }
+    &.show {
+      bottom: 0;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    & ul::-webkit-scrollbar {
+      width: 0px;
+    }
   } //End music-list
   //End music-player
 }

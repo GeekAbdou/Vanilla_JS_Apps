@@ -54,13 +54,13 @@ i {
   position: relative;
   border-radius: 10px;
   background-color: white;
-  -webkit-box-shadow: 0px 6px 15px #3f3f3f;
-          box-shadow: 0px 6px 15px #3f3f3f;
+  -webkit-box-shadow: 0px 6px 15px #575757;
+          box-shadow: 0px 6px 15px #575757;
 }
 
 .music-player__top-bar {
   font-size: 18px;
-  color: #3f3f3f;
+  color: #575757;
 }
 
 .music-player__music-picture {
@@ -89,12 +89,12 @@ i {
 
 .music-player__music-details--name {
   font-size: 21px;
-  color: #3f3f3f;
+  color: #575757;
 }
 
 .music-player__music-details--artist {
   font-size: 18px;
-  color: #3f3f3f;
+  color: #575757;
   opacity: 0.9;
   line-height: 35px;
 }
@@ -141,7 +141,7 @@ i {
 
 .music-player__timers {
   font-size: 13px;
-  color: #3f3f3f;
+  color: #575757;
 }
 
 .music-player__control {
@@ -180,7 +180,6 @@ i {
   background: white;
   width: 100%;
   left: 0;
-  padding: 15px 30px;
   border-radius: 15px;
   -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
@@ -188,7 +187,53 @@ i {
   opacity: 0;
   pointer-events: none;
   z-index: 5;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.music-player__music-list--header {
+  padding: 15px 30px;
+}
+
+.music-player__music-list--header .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 18px;
+  color: #575757;
+}
+
+.music-player__music-list--body .plist-song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  color: #575757;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.music-player__music-list--body .playing {
+  pointer-events: none;
+  color: #9f6ea3;
+}
+
+.music-player__music-list.show {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.music-player__music-list ul::-webkit-scrollbar {
+  width: 0px;
 }
 /*# sourceMappingURL=main.css.map */
