@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="main.css" rel="stylesheet" />
     <title>Music Player</title>
@@ -13,7 +17,7 @@
 <body>
     <div class="music-player">
 
-        <div class="music-player__top-bar">
+        <div class="music-player__top-bar flex-space-between">
             <i class="material-icons">expand_more</i>
             <span>Now Playing</span>
             <i class="material-icons">more_horiz</i>
@@ -22,47 +26,69 @@
 
 
         <div class="music-player__music-picture">
-            <img src="" alt="">
+            <img src="./images/music-1.jpg" alt="">
+            <!--will be changed with JS-->
         </div>
         <!--End music-player__music-picture-->
 
 
-        <div class="music-player__music-details">
-            <p class="music-details__name"></p>
-            <p class="music-details__artist"></p>
+        <div class="music-player__music-details flex-center">
+            <p class="music-player__music-details--name">Havana - Carala</p>
+            <p class="music-player__music-details--artist">Havana</p>
         </div>
         <!--End music-player__music-details-->
 
 
         <div class="music-player__progress-bar">
-            <audio src="" id="current-audio"></audio>
+            <div class="music-player__progress-bar--value">
+                <audio src="" id="current-audio"></audio>
+            </div>
         </div>
         <!--End music-player__progress-bar-->
 
 
-        <div class="music-player__timers">
-            <span class="current-time"></span>
-            <span class="total-time"></span>
+        <div class="music-player__timers flex-space-between">
+            <span class="current-time">00.00</span>
+            <span class="total-time">00.00</span>
         </div>
         <!--End music-player__timers-->
 
 
-        <div class="music-player__control">
-            <i id="repeat-plist" class="material-icons">repeat</i>
-            <i id="prev" class="material-icons">skip_previous</i>
-            <i id="play-pause" class="material-icons">play_arrow</i>
-            <i id="next" class="material-icons">skip_next</i>
-            <i id="plist" class="material-icons">queue_music</i>
+        <div class="music-player__control flex-space-between">
+            <i id="repeat-plist" class="material-icons music-player__control--repeat">repeat</i>
+            <i id="prev" class="material-icons music-player__control--previous">skip_previous</i>
+            <div id="play" class="music-player__control--play flex-center">
+                <i class="material-icons play-i">play_arrow</i>
+            </div>
+            <i id="next" class="material-icons music-player__control--skip">skip_next</i>
+            <i id="plist" class="material-icons music-player__control--list">queue_music</i>
         </div>
         <!--End music-player__timers-->
 
 
+        <div class="music-player__music-list">
+            <div class="music-player__music-list-header flex-space-between">
+                <div class="row">
+                    <i class="material-icons list">queue_music</i>
+                    <span>Music List</span>
+                </div>
+                <i id="close" class="material-icons close">close</i>
+            </div>
+            <!--End music-list-header-->
 
-
+            <div class="music-player__music-list-body">
+                <ul>
+                    <!--JS will Display the li of music-->
+                </ul>
+            </div>
+            <!--End music-list-body-->
+        </div>
+        <!--End music-player__music-list-->
 
     </div>
     <!--music-player-->
     <script src="./src/main.js"></script>
+    <script src="./src/list.js"></script>
 </body>
 
 </html>

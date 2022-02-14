@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff74a4), to(#9f6ea3));
+  background: linear-gradient(#ff74a4 0%, #9f6ea3 100%);
+}
+
+i {
+  cursor: pointer;
+}
+
+.flex-space-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.music-player {
+  width: 380px;
+  padding: 25px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 6px 15px #3f3f3f;
+          box-shadow: 0px 6px 15px #3f3f3f;
+}
+
+.music-player__top-bar {
+  font-size: 18px;
+  color: #3f3f3f;
+}
+
+.music-player__music-picture {
+  width: 100%;
+  height: 250px;
+  -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  margin: 25px 0 10px 0;
+}
+
+.music-player__music-picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.music-player__music-details {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+}
+
+.music-player__music-details--name {
+  font-size: 21px;
+  color: #3f3f3f;
+}
+
+.music-player__music-details--artist {
+  font-size: 18px;
+  color: #3f3f3f;
+  opacity: 0.9;
+  line-height: 35px;
+}
+
+.music-player__progress-bar {
+  height: 7px;
+  width: 100%;
+  border-radius: 50px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.music-player__progress-bar--value {
+  height: inherit;
+  width: 76%;
+  position: relative;
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, right top, from(#ff74a4), to(#9f6ea3));
+  background: linear-gradient(90deg, #ff74a4 0%, #9f6ea3 100%);
+}
+
+.music-player__timers {
+  font-size: 13px;
+  color: #3f3f3f;
+}
+
+.music-player__control {
+  margin: 10px 0 5px 0;
+}
+
+.music-player__control i {
+  font-size: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff74a4), to(#9f6ea3));
+  background: linear-gradient(#ff74a4 0%, #9f6ea3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.music-player__control--previous, .music-player__control--skip {
+  font-size: 40px !important;
+}
+
+.music-player__control--play {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cecaca)) !important;
+  background: linear-gradient(white 0%, #cecaca 100%) !important;
+  -webkit-box-shadow: 0 0 8px #ff74a4;
+          box-shadow: 0 0 8px #ff74a4;
+  /*       &::before {
+        content: "";
+        position: absolute;
+        height: 43px;
+        width: 43px;
+        border-radius: inherit;
+        background: linear-gradient($pink 0%, $violet 100%);
+      } */
+}
+
+.music-player__control--play i {
+  font-size: 45px;
+}
+
+.music-player__control__music-list {
+  position: absolute;
+  background: white;
+  width: 100%;
+  left: 0;
+  padding: 15px 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+  bottom: -55%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.music-player__music-list {
+  position: absolute;
+  background: white;
+  width: 100%;
+  left: 0;
+  padding: 15px 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+  bottom: -55%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/*# sourceMappingURL=main.css.map */

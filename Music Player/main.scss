@@ -1,0 +1,163 @@
+$pink: #ff74a4;
+$violet: #9f6ea3;
+$p-color: rgb(63, 63, 63);
+$b-sh-color: rgba(0, 0, 0, 0.15);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient($pink 0%, $violet 100%);
+}
+
+i {
+  cursor: pointer;
+}
+
+.flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-player {
+  width: 380px;
+  padding: 25px;
+  overflow: hidden; //for the list
+  position: relative;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 6px 15px $p-color;
+
+  &__top-bar {
+    font-size: 18px;
+    color: $p-color;
+  }
+
+  &__music-picture {
+    width: 100%;
+    height: 250px;
+    box-shadow: 0px 6px 15px $b-sh-color;
+    margin: 25px 0 10px 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  &__music-details {
+    flex-direction: column;
+    margin: 20px;
+
+    &--name {
+      font-size: 21px;
+      color: $p-color;
+    }
+    &--artist {
+      font-size: 18px;
+      color: $p-color;
+      opacity: 0.9;
+      line-height: 35px;
+    }
+  }
+
+  &__progress-bar {
+    height: 7px;
+    width: 100%;
+    border-radius: 50px;
+    background: #f0f0f0;
+    cursor: pointer;
+
+    &--value {
+      height: inherit;
+      width: 76%;
+      position: relative;
+      border-radius: inherit;
+      background: linear-gradient(90deg, $pink 0%, $violet 100%);
+    }
+  }
+
+  &__timers {
+    font-size: 13px;
+    color: $p-color;
+  }
+
+  &__control {
+    margin: 10px 0 5px 0;
+
+    i {
+      font-size: 30px;
+      background: linear-gradient($pink 0%, $violet 100%);
+      //those for making backgroud color put on the text --trick method
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--previous,
+    &--skip {
+      font-size: 40px !important;
+    }
+
+    &--play {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      background: linear-gradient(white 0%, #cecaca 100%) !important;
+      box-shadow: 0 0 8px $pink;
+      i {
+        font-size: 45px;
+      }
+      /*       &::before {
+        content: "";
+        position: absolute;
+        height: 43px;
+        width: 43px;
+        border-radius: inherit;
+        background: linear-gradient($pink 0%, $violet 100%);
+      } */
+    }
+    &__music-list {
+      position: absolute;
+      background: white;
+      width: 100%;
+      left: 0;
+      padding: 15px 30px;
+      border-radius: 15px;
+      box-shadow: 0px -5px 10px $b-sh-color;
+      bottom: -55%;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 5;
+      transition: all 0.15s ease-out;
+    }
+  }
+  &__music-list {
+    position: absolute;
+    background: white;
+    width: 100%;
+    left: 0;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px -5px 10px $b-sh-color;
+    bottom: -55%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    transition: all 0.15s ease-out;
+  }
+}
