@@ -44,7 +44,7 @@ i {
   &__top-bar {
     font-size: 18px;
     color: $p-color;
-  }
+  } //End of top-bar
 
   &__music-picture {
     width: 100%;
@@ -57,7 +57,7 @@ i {
       object-fit: cover;
       border-radius: 10px;
     }
-  }
+  } //End music-picture
 
   &__music-details {
     flex-direction: column;
@@ -73,7 +73,7 @@ i {
       opacity: 0.9;
       line-height: 35px;
     }
-  }
+  } //End music details
 
   &__progress-bar {
     height: 7px;
@@ -88,13 +88,13 @@ i {
       position: relative;
       border-radius: inherit;
       background: linear-gradient(90deg, $pink 0%, $violet 100%);
-    }
-  }
+    } //End value of progress-bar
+  } //End progress-bar
 
   &__timers {
     font-size: 13px;
     color: $p-color;
-  }
+  } //End timers of music
 
   &__control {
     margin: 10px 0 5px 0;
@@ -122,30 +122,9 @@ i {
       i {
         font-size: 45px;
       }
-      /*       &::before {
-        content: "";
-        position: absolute;
-        height: 43px;
-        width: 43px;
-        border-radius: inherit;
-        background: linear-gradient($pink 0%, $violet 100%);
-      } */
-    }
-    &__music-list {
-      position: absolute;
-      background: white;
-      width: 100%;
-      left: 0;
-      padding: 15px 30px;
-      border-radius: 15px;
-      box-shadow: 0px -5px 10px $b-sh-color;
-      bottom: -55%;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 5;
-      transition: all 0.15s ease-out;
-    }
-  }
+    } //End play button
+  } //End Controls
+  //End
   &__music-list {
     position: absolute;
     background: white;
@@ -159,5 +138,6 @@ i {
     pointer-events: none;
     z-index: 5;
     transition: all 0.15s ease-out;
-  }
+  } //End music-list
+  //End music-player
 }

@@ -146,35 +146,10 @@ i {
   background: linear-gradient(white 0%, #cecaca 100%) !important;
   -webkit-box-shadow: 0 0 8px #ff74a4;
           box-shadow: 0 0 8px #ff74a4;
-  /*       &::before {
-        content: "";
-        position: absolute;
-        height: 43px;
-        width: 43px;
-        border-radius: inherit;
-        background: linear-gradient($pink 0%, $violet 100%);
-      } */
 }
 
 .music-player__control--play i {
   font-size: 45px;
-}
-
-.music-player__control__music-list {
-  position: absolute;
-  background: white;
-  width: 100%;
-  left: 0;
-  padding: 15px 30px;
-  border-radius: 15px;
-  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
-  bottom: -55%;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 5;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
 }
 
 .music-player__music-list {
