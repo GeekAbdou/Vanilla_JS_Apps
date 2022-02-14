@@ -75,21 +75,37 @@ i {
     }
   } //End music details
 
-  &__progress-bar {
-    height: 7px;
+  &__progress-area {
+    height: 6px;
     width: 100%;
     border-radius: 50px;
     background: #f0f0f0;
     cursor: pointer;
+  }
 
-    &--value {
-      height: inherit;
-      width: 76%;
-      position: relative;
-      border-radius: inherit;
-      background: linear-gradient(90deg, $pink 0%, $violet 100%);
-    } //End value of progress-bar
-  } //End progress-bar
+  &__progress-bar {
+    height: inherit;
+    width: 50%;
+    position: relative;
+    border-radius: inherit;
+    background: linear-gradient(90deg, $pink 0%, $violet 100%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      top: 50%;
+      right: -5px;
+      z-index: 2;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-50%);
+      background: inherit;
+      transition: opacity 0.3s ease;
+    }
+  }
 
   &__timers {
     font-size: 13px;
@@ -97,7 +113,7 @@ i {
   } //End timers of music
 
   &__control {
-    margin: 10px 0 5px 0;
+    margin: 40px 0 5px 0;
 
     i {
       font-size: 30px;

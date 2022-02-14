@@ -26,39 +26,40 @@
 
 
         <div class="music-player__music-picture">
-            <img src="./images/music-1.jpg" alt="">
+            <img src="" alt="">
             <!--will be changed with JS-->
         </div>
         <!--End music-player__music-picture-->
 
 
         <div class="music-player__music-details flex-center">
-            <p class="music-player__music-details--name">Havana - Carala</p>
-            <p class="music-player__music-details--artist">Havana</p>
+            <p class="music-player__music-details--name"></p>
+            <p class="music-player__music-details--artist"></p>
         </div>
         <!--End music-player__music-details-->
 
 
-        <div class="music-player__progress-bar">
-            <div class="music-player__progress-bar--value">
-                <audio src="" id="current-audio"></audio>
+        <div class="music-player__progress-area">
+            <div class="music-player__progress-bar">
+                <audio src="" class="music-player__progress-bar--current"></audio>
             </div>
-        </div>
-        <!--End music-player__progress-bar-->
+            <!--End music-player__progress-bar-->
 
+            <div class="music-player__timers flex-space-between">
+                <span class="current-time">00.00</span>
+                <span class="total-time">00.00</span>
+            </div>
+            <!--End music-player__timers-->
 
-        <div class="music-player__timers flex-space-between">
-            <span class="current-time">00.00</span>
-            <span class="total-time">00.00</span>
         </div>
-        <!--End music-player__timers-->
+        <!--End music-player__progress-area-->
 
 
         <div class="music-player__control flex-space-between">
             <i id="repeat-plist" class="material-icons music-player__control--repeat">repeat</i>
             <i id="prev" class="material-icons music-player__control--previous">skip_previous</i>
-            <div id="play" class="music-player__control--play flex-center">
-                <i class="material-icons play-i">play_arrow</i>
+            <div class="music-player__control--play flex-center">
+                <i class="material-icons play" id="playBtn"></i>
             </div>
             <i id="next" class="material-icons music-player__control--skip">skip_next</i>
             <i id="plist" class="material-icons music-player__control--list">queue_music</i>
@@ -69,10 +70,10 @@
         <div class="music-player__music-list">
             <div class="music-player__music-list-header flex-space-between">
                 <div class="row">
-                    <i class="material-icons list">queue_music</i>
+                    <i class="material-icons list" id="more-music">queue_music</i>
                     <span>Music List</span>
                 </div>
-                <i id="close" class="material-icons close">close</i>
+                <i id="close" class="material-icons close" id="close">close</i>
             </div>
             <!--End music-list-header-->
 
@@ -87,8 +88,9 @@
 
     </div>
     <!--music-player-->
-    <script src="./src/main.js"></script>
+
     <script src="./src/list.js"></script>
+    <script src="./src/main.js"></script>
 </body>
 
 </html>
